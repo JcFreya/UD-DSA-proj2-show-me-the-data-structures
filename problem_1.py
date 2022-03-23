@@ -23,9 +23,9 @@ class LRU_Cache(object):
     def get(self, key):
         """
         Retrieve item from provided key. Return -1 if nonexistent.
-        Input:
+        Args:
             self, key value
-        Output:
+        Returns:
             value: value of input key (-1 if input key not exists)
         """
         if key is None:
@@ -36,7 +36,7 @@ class LRU_Cache(object):
         """
         Set the value if the key is not present in the cache.
         If the cache is at capacity remove the oldest item.
-        Input:
+        Args:
             self, key, value
         """
         # check none max_capacity
