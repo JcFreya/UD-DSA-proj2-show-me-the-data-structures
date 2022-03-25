@@ -46,6 +46,11 @@ def is_user_in_group(user, group):
       user(str): user name/id
       group(class:Group): group to check user membership against
     """
+    # check None Input
+    if (user is None) or (group is None):
+        print("Error: User and group couldn't be None\n")
+        return
+
     if user == group.get_name():
         return True
 
@@ -70,4 +75,4 @@ print('----------Test4----------')
 print(is_user_in_group("", parent)) # False
 
 print('----------Test5----------')
-print(is_user_in_group(None, parent))   # False
+print(is_user_in_group(None, parent))   # Error: User and group couldn't be None
